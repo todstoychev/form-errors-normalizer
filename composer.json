@@ -20,10 +20,14 @@
         }
     ],
     "autoload": {
-        "Todstoychev\\FormErrorsNormalizer\\": "src/"
+        "psr-4": {
+            "Todstoychev\\FormErrorsNormalizer\\": "src/"
+        }
     },
     "autoload-dev": {
-        "Todstoychev\\FormErrorsNormalizer\\Tests\\": "tests/"
+        "psr-4": {
+            "Todstoychev\\FormErrorsNormalizer\\Tests\\": "tests/"
+        }
     },
     "minimum-stability": "dev"
 }

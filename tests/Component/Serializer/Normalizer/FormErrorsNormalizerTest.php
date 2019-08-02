@@ -27,30 +27,38 @@ class FormErrorsNormalizerTest extends TestCase
         $child = static::createMock(Form::class);
         $formError = static::createMock(FormError::class);
         $formError->method('getMessage')
-            ->willReturn('Main error');
+            ->willReturn('Main error')
+        ;
         $childError = static::createMock(FormError::class);
         $childError->method('getMessage')
-            ->willReturn('Child error');
+            ->willReturn('Child error')
+        ;
         $child->method('getErrors')
-            ->with(static::any())
-            ->willReturn([$childError]);
+            ->willReturn([$childError])
+        ;
         $child->method('getName')
-            ->willReturn('child');
+            ->willReturn('child')
+        ;
+        $child->method('all')
+            ->willReturn([])
+        ;
         $form->method('getErrors')
-            ->willReturn([$formError]);
+            ->willReturn([$formError])
+        ;
         $form->method('all')
-            ->willReturn([$child]);
+            ->willReturn([$child])
+        ;
 
         $expected = [
-            'Main Error',
+            'Main error',
             'child' => [
-                'Child error'
-            ]
+                'Child error',
+            ],
         ];
 
         $actual = $this->normalizer->normalize($form);
 
-        static::assertEquals($expected, $actual);
+        static::assertEquals($actual, $expected);
     }
 
     public function testThrowsException()
