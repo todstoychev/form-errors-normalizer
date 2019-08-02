@@ -1,5 +1,5 @@
 {
-    "name": "todstochev/form-errors-normalizer",
+    "name": "todstoychev/form-errors-normalizer",
     "description": "Symfony Form object errors normalizer. Suitable to use for building responses for RESTful API's.",
     "type": "library",
     "require": {
