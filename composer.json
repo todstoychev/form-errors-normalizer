@@ -1,0 +1,29 @@
+{
+    "name": "todstochev/form-errors-normalizer",
+    "description": "Symfony Form object errors normalizer. Suitable to use for building responses for RESTful API's.",
+    "type": "library",
+    "require": {
+        "php": ">=7.1",
+        "symfony/validator": ">=3.0",
+        "symfony/form": ">=3.0",
+        "symfony/serializer": "4.4.x-dev"
+    },
+    "require-dev": {
+        "symfony/var-dumper": ">=3.0",
+        "phpunit/phpunit": "7.5.x-dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Todor Todorov",
+            "email": "todstoychev@gmail.com"
+        }
+    ],
+    "autoload": {
+        "Todstoychev\\FormErrorsNormalizer\\": "src/"
+    },
+    "autoload-dev": {
+        "Todstoychev\\FormErrorsNormalizer\\Tests\\": "tests/"
+    },
+    "minimum-stability": "dev"
+}
